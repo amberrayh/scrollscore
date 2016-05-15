@@ -4,30 +4,28 @@
   <meta charset="utf-8" >
    <title>Ads</title>
    <style type="text/css">
+    html {height: 110%;}
       ol, ul { 
      list-style-type: none;
       }
-/*      body {
-      	style: "text-align: right;"
-      	background-image: url("bannerads5.jpg");
-      	background-repeat: repeat-y;
-      }*/
+
+      .fixed {
+        position: fixed;
+      }
+      .right {
+        right: 0px;
+      }
+      body{overflow-y: scroll;}
    </style>
 </head>
 
 <body>
+  <div style="height: 1px"></div>
+<div class="fixed" style="top: 0px;"><img src="bannerads5.jpg" height="50px"></div>
 
-<div style="position: fixed; top: 0"><img src="bannerads5.jpg" height="50px"></div>
-<br><br>
-<div style="text-align: right;"><img src="bannerads4.jpg"></div>
-<br><br>
-<div style="text-align: right;"><img src="bannerads3.jpg"></div>
-<br><br>
-<div style="text-align: right;"><img src="bannerads2.jpg" width="10%"></div>
-<br><br>
-<div style="text-align: right;"><img src="bannerad1.jpeg"></div>
-<br><br>
-<div style="text-align: right;"><img src="bannerads.jpg"></div>
+<div class="fixed right" style="top: 120px;"><img src="bannerads4.jpg", height="100px"></div>
+
+<div class="fixed right" style="top: 220px;"><img src="bannerads3.jpg" height="100px"></div>
 
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
