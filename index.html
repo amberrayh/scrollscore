@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple jQuery Infinite Scroll</title>
+</head>
+<body>
+
+  <h1>One</h1>
+  <br />
+  <h1>Two</h1>
+  <br />
+  <h1>Three</h1>
+  <br />
+  <h1>Four</h1>
+  <br />
+  <h1>Five</h1>
+  <br />
+  <h1>Six</h1>
+  <br />
+  <h1>Seven</h1>
+  <br />
+  <h1>Eight</h1>
+  <br />
+  <h1>Nine</h1>
+  <br />
+  <h1>Ten</h1>
+  <br />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+  <script>
+  
+    $(function() {
+  
+      $(window).scroll(function () {
+      
+        var theWindow = $(this);       
+        var theContainer = $('body');  
+        var tweak = 10;
+      
+      
+        if ( theWindow.scrollTop() >= theContainer.height() - theWindow.height() - tweak ) {
+          theContainer.append('<h1>'+theContainer.height() +'</h1><br />');
+        }
+      });
+  
+    });
+  
+  </script>
+  
+</body>
+</html>

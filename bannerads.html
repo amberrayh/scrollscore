@@ -17,7 +17,7 @@
 
 <body>
 
-<div style="text-align: center;"><img src="bannerads5.jpg" width="50%"></div>
+<div style="position: fixed; top: 0"><img src="bannerads5.jpg" height="50px"></div>
 <br><br>
 <div style="text-align: right;"><img src="bannerads4.jpg"></div>
 <br><br>
@@ -28,5 +28,30 @@
 <div style="text-align: right;"><img src="bannerad1.jpeg"></div>
 <br><br>
 <div style="text-align: right;"><img src="bannerads.jpg"></div>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+  <script>
+  
+    $(function() {
+  
+      $(window).scroll(function () {
+      
+        var theWindow = $(this);       
+        var theContainer = $('body');  
+        var tweak = 10;
+      
+      
+        if ( theWindow.scrollTop() >= theContainer.height() - theWindow.height() - tweak ) {
+          theContainer.append('<h1>'+theContainer.height() +'</h1><br />');
+        }
+      });
+  
+    });
+  
+  </script>
+
 </body>
+
+
 </html>
